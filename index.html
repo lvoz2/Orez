@@ -11,6 +11,14 @@
 		<script src="https://lvoz2.github.io/Orez/js/main.js"></script>
 	</head>
 	<body onload="game.load()" onresize="game.resize()">
+		<div id="loadScreen">
+			<h1>Orez</h1>
+			<br/>
+			<h4 id="description"></h4>
+			<button class="menu-button" onclick="loadGame()">Load Game</button>
+			<button class="menu-button" onclick="newGame()">New Game</button>
+			<button class="menu-button" onclick="loadGame()"></button>
+		</div>
 		<canvas id="screen"></canvas>
 	</body>
 </html>
