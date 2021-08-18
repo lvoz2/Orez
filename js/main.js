@@ -25,3 +25,5 @@ game.load = function() {
 	game.resize()
 	setInterval(game.refresh, 20);
 }
+game.start = function() {
+}
