@@ -10,6 +10,17 @@ document.onmousemove = function(e) {
 }
 game.click = function() {
 }
+game.loadGame = function() {
+}
+game.newGame = function() {
+	game.canvas.requestPointerLock = game.canvas.requestPointerLock ||
+		game.canvas.mozRequestPointerLock;
+
+	document.exitPointerLock = document.exitPointerLock ||
+		document.mozExitPointerLock;
+	game.canvas.requestPointerLock()
+	
+}
 game.refresh = function() {
 	const gl = game.canvas.getContext("webgl");
 	if (gl === null) {
