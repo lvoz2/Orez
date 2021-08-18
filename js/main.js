@@ -6,7 +6,7 @@ game.resize = function() {
 game.click = function() {
 }
 game.refresh = function() {
-	const gl = canvas.getContext("webgl");
+	const gl = game.canvas.getContext("webgl");
 	if (gl === null) {
 		alert("Unable to start game. Make sure your browser or machine supports WebGL.");
 		return;
