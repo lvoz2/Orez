@@ -1,5 +1,4 @@
 var game = {};
-game.canvas = document.getElementById("screen");
 game.resize = function() {
 	game.canvas.width = document.body.clientWidth;
 	game.canvas.height = document.body.clientHeight;
@@ -16,6 +15,7 @@ game.refresh = function() {
 	gl.clear(gl.COLOR_BUFFER_BIT);
 }
 game.load = function() {
+	game.canvas = document.getElementById("screen");
 	game.resize()
 	setInterval(game.refresh, 10);
 }
