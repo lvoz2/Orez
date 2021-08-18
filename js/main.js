@@ -3,6 +3,11 @@ game.resize = function() {
 	game.canvas.width = document.body.clientWidth;
 	game.canvas.height = document.body.clientHeight;
 }
+document.onmousemove = function(e) {
+	var event = e || window.event;
+	window.mouseX = event.clientX;
+	window.mouseY = event.clientY;
+}
 game.click = function() {
 }
 game.refresh = function() {
