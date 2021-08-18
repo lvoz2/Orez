@@ -1,8 +1,8 @@
 var game = {};
 function load() {
 	game.canvas = document.getElementById("screen");
-	game.canvas.width = document.body.clientWidth;
-	game.canvas.height = document.body.clientHeight;
+	game.canvas.width = screen.availWidth;
+	game.canvas.height = screen.availHeight;
 }
 game.click = function() {
 }
