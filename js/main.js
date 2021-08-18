@@ -6,7 +6,7 @@ game.resize = function() {
 }
 game.click = function() {
 }
-game.toggleFullscreen = function() {
+game.toggleFullScreen = function() {
 	let elem = document.body;
 	if (!document.fullscreenElement) {
 		elem.requestFullscreen().catch(err => {
