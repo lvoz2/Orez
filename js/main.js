@@ -21,6 +21,7 @@ game.refresh = function() {
 }
 game.load = function() {
 	game.canvas = document.getElementById("screen");
+	canvas.onclick = function() {click()};
 	game.resize()
 	setInterval(game.refresh, 20);
 }
