@@ -22,13 +22,9 @@ game.newGame = function() {
 	
 }
 game.refresh = function() {
-	const gl = game.canvas.getContext("webgl");
-	if (gl === null) {
-		alert("Unable to start game. Make sure your browser or machine supports WebGL.");
-		return;
-	}
-	gl.clearColor(0.0, 0.0, 0.0, 1.0);
-	gl.clear(gl.COLOR_BUFFER_BIT);
+	const ctx = game.canvas.getContext('2d');
+	ctx.fillStyle = 'green';
+	ctx.fillRect(10, 10, 100, 100);
 }
 game.load = function() {
 	game.canvas = document.getElementById("screen");
