@@ -9,3 +9,14 @@ game.resize = function() {
 }
 game.click = function() {
 }
+game.toggleFullscreen = function() {
+	let elem = document.body;
+	if (!document.fullscreenElement) {
+		elem.requestFullscreen().catch(err => {
+			alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+		});
+	} 
+	else {
+		document.exitFullscreen();
+	}
+}
