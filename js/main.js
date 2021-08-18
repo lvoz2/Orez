@@ -17,5 +17,5 @@ game.refresh = function() {
 }
 game.load = function() {
 	game.resize()
-	game.toggleFullScreen()
+	setInterval(refresh, 10);
 }
