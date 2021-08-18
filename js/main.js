@@ -17,5 +17,5 @@ game.refresh = function() {
 game.load = function() {
 	game.canvas = document.getElementById("screen");
 	game.resize()
-	setInterval(game.refresh, 10);
+	setInterval(game.refresh, 20);
 }
