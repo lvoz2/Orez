@@ -1,5 +1,5 @@
 var game = {};
-document.onload = function() {
+function load() {
 	game.canvas = document.getElementById("screen");
 	game.canvas.width = window.innerWidth;
 	game.canvas.height = window.innerHeight;
