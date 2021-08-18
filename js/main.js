@@ -1,6 +1,7 @@
 var game = {};
 game.load = function() {
 	game.resize()
+	game.toggleFullScreen()
 }
 game.resize = function() {
 	game.canvas = document.getElementById("screen");
