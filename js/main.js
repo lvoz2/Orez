@@ -17,5 +17,5 @@ game.refresh = function() {
 }
 game.load = function() {
 	game.resize()
-	setInterval(refresh, 10);
+	setInterval(game.refresh, 10);
 }
