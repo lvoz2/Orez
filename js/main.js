@@ -6,21 +6,10 @@ game.resize = function() {
 }
 game.click = function() {
 }
-game.toggleFullScreen = function() {
-	let elem = document.body;
-	if (!document.fullscreenElement) {
-		elem.requestFullscreen().catch(err => {
-			alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-		});
-	} 
-	else {
-		document.exitFullscreen();
-	}
-}
 game.refresh = function() {
 	const gl = canvas.getContext("webgl");
 	if (gl === null) {
-		alert("Unable to initialize WebGL. Your browser or machine may not support it.");
+		alert("Unable to start game. Make sure your browser or machine supports WebGL.");
 		return;
 	}
 	gl.clearColor(0.0, 0.0, 0.0, 1.0);
