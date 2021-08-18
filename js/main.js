@@ -22,14 +22,14 @@ game.newGame = function() {
 	
 }
 game.refresh = function() {
-	const ctx = game.canvas.getContext('2d');
-	ctx.fillStyle = 'green';
-	ctx.fillRect(10, 10, 100, 100);
+	game.ctx.fillStyle = '#efefef';
+	game.ctx.fillRect(0, 0, game.canvas.width, game.canvas.height);
 }
 game.load = function() {
 	game.canvas = document.getElementById("screen");
 	game.canvas.onclick = function() {click()};
 	game.resize()
+	game.ctx = game.canvas.getContext('2d');
 	setInterval(game.refresh, 20);
 }
 game.start = function() {
