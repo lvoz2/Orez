@@ -140,4 +140,5 @@ function Game() {
 	for (var i = 0; i < game.shapesY[shapeNo].length; i++) {
 		grid[oreY + game.shapesY[shapeNo][i]][oreX + game.shapesX[shapeNo][i]] = 'iron';
 	}
+	this.grid = grid;
 }
