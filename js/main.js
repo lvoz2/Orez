@@ -137,7 +137,7 @@ function Game() {
 	var oreX = Math.floor(Math.random() * 100);
 	var oreY = Math.floor(Math.random() * 100);
 	var shapeNo = Math.floor(Math.random() * 1);
-	for (var i = 0; i <= game.shapesY[shapeNo].length; i++) {
+	for (var i = 0; i < game.shapesY[shapeNo].length; i++) {
 		grid[oreY + game.shapesY[shapeNo][i]][oreX + game.shapesX[shapeNo][i]] = 'iron';
 	}
 }
