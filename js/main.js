@@ -48,7 +48,7 @@ game.start = function() {
 function Game() {
 	var grid = Array(100);
 	for (var i = 0; i < 100; i++) {
-		grid[i] = Array(100).fill(0);
+		grid[i] = Array(100).fill(1);
 	}
 	var map = {
 		cols: 100,
@@ -63,8 +63,8 @@ function Game() {
 	var oreY = Math.floor(Math.random() * 100);
 	var shapeNo = Math.floor(Math.random() * 1);
 	for (var i = 0; i < game.shapesY[shapeNo].length; i++) {
-		grid[oreY + game.shapesY[shapeNo][i]][oreX + game.shapesX[shapeNo][i]] = 'iron';
+		map.tiles[oreY + game.shapesY[shapeNo][i]][oreX + game.shapesX[shapeNo][i]] = '2';
 	}
-	this.grid = grid;
+	this.map = map;
 	setInterval(game.refresh, 20)
 }
