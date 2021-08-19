@@ -22,7 +22,7 @@ game.newGame = function() {
 	
 }
 game.refresh = function() {
-	game.ctx.fillStyle = '#efefef';
+	game.ctx.fillStyle = '#eaeaea';
 	game.ctx.fillRect(0, 0, game.canvas.width, game.canvas.height);
 }
 game.load = function() {
