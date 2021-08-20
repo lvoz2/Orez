@@ -49,10 +49,10 @@ function Game() {
 		grid[i] = Array(100).fill(1);
 	}
 	for (var b = 0; b < 10; b++) {
-		var oreX = 5 + Math.floor(Math.random() * 85);
-		var oreY = 5 + Math.floor(Math.random() * 85);
+		var oreX = 5 + Math.floor(Math.random() * 80);
+		var oreY = 5 + Math.floor(Math.random() * 80);
 		for (var i = 0; i < (25 + Math.floor(Math.random() * 65)); i++) {
-			grid[oreY + Math.floor(Math.random() * 8)][oreX + Math.floor(Math.random() * 8)] = 2;
+			grid[oreY + Math.floor(Math.random() * 10)][oreX + Math.floor(Math.random() * 10)] = 2;
 		}
 	}
 	var map = {
