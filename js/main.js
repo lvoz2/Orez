@@ -41,7 +41,7 @@ game.refresh = function() {
 			var tile = game.instance.map.getTile(c, r);
 			if (tile !== 0) { // 0 => empty tile
 				game.ctx.drawImage(
-					tileAtlas, // image
+					game.tileAtlas, // image
 					(tile - 1) * game.instance.map.tsize, // source x
 					0, // source y
 					game.instance.map.tsize, // source width
@@ -66,6 +66,7 @@ game.load = function() {
 	game.resize()
 	game.ctx = game.canvas.getContext('2d');
 	var p = load();
+	game.tileAtlas = Loader.getImage('tiles')
 }
 game.start = function() {
 }
