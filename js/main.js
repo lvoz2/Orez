@@ -49,8 +49,8 @@ function Game() {
 		grid[i] = Array(100).fill(1);
 	}
 	for (var b = 0; b < 10; b++) {
-		var oreX = Math.floor(Math.random() * 100);
-		var oreY = Math.floor(Math.random() * 100);
+		var oreX = 5 + Math.floor(Math.random() * 90);
+		var oreY = 5 + Math.floor(Math.random() * 90);
 		for (var i = 0; i < (25 + Math.floor(Math.random() * 65)); i++) {
 			grid[oreY + Math.floor(Math.random() * 8)][oreX + Math.floor(Math.random() * 8)] = 2;
 		}
