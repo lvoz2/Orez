@@ -36,8 +36,6 @@ game.refresh = function() {
 	}
 }
 game.load = function() {
-	game.shapesX = {0: [0, -1, 0, +1, -2, -1, 0, +1, +2, -3, -2, -1, 0, +1, +2, +3, -2, -1, 0, +1, +2, -1, 0, +1, 0], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: []};
-	game.shapesY = {0: [+3, +2, +2, +2, +1, +1, +1, +1, +1, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -2, -2, -2, -3], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: []};
 	game.canvas = document.getElementById("screen");
 	game.canvas.onclick = function() {click()};
 	game.resize()
@@ -50,6 +48,12 @@ function Game() {
 	for (var i = 0; i < 100; i++) {
 		grid[i] = Array(100).fill(1);
 	}
+	for
+	var oreX = Math.floor(Math.random() * 100);
+	var oreY = Math.floor(Math.random() * 100);
+	for (var i = 0; i < (25 + Math.floor(Math.random() * 65); i++) {
+		grid[oreY + Math.floor(Math.random() * 10)][oreX + Math.floor(Math.random() * 10)] = '2';
+	}
 	var map = {
 		cols: 100,
 		rows: 100,
@@ -59,12 +63,6 @@ function Game() {
 			return this.tiles[y][x]
 		}
 	};
-	var oreX = Math.floor(Math.random() * 100);
-	var oreY = Math.floor(Math.random() * 100);
-	var shapeNo = Math.floor(Math.random() * 1);
-	for (var i = 0; i < game.shapesY[shapeNo].length; i++) {
-		map.tiles[oreY + game.shapesY[shapeNo][i]][oreX + game.shapesX[shapeNo][i]] = '2';
-	}
 	this.map = map;
 	setInterval(game.refresh, 20)
 }
