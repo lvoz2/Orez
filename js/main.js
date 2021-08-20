@@ -1,3 +1,23 @@
+var Loader = {
+	images: {}
+};
+Loader.loadImage = function (key, src) {
+	var img = new Image();
+	var d = new Promise(function (resolve, reject) {
+		img.onload = function () {
+			this.images[key] = img;
+			resolve(img);
+		}.bind(this);
+		img.onerror = function () {
+			reject('Could not load image: ' + src);
+		};
+	}.bind(this));
+	img.src = src;
+	return d;
+};
+Loader.getImage = function (key) {
+	return (key in this.images) ? this.images[key] : null;
+};
 var game = {};
 game.resize = function() {
 	game.canvas.width = document.body.clientWidth;
@@ -35,11 +55,17 @@ game.refresh = function() {
 		}
 	}
 }
+var load = function () {
+	return [
+		Loader.loadImage('tiles', 'https://lvoz2.github.io/Orez/images/tiles.png'),
+	];
+}
 game.load = function() {
 	game.canvas = document.getElementById("screen");
 	game.canvas.onclick = function() {click()};
 	game.resize()
 	game.ctx = game.canvas.getContext('2d');
+	var p = load();
 }
 game.start = function() {
 }
