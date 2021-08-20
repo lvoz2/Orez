@@ -51,7 +51,7 @@ function Game() {
 	for (var b = 0; b < 10; b++) {
 		var oreX = Math.floor(Math.random() * 100);
 		var oreY = Math.floor(Math.random() * 100);
-		for (var i = 0; i < (25 + Math.floor(Math.random() * 65); i++) {
+		for (var i = 0; i < (25 + Math.floor(Math.random() * 65)); i++) {
 			grid[oreY + Math.floor(Math.random() * 10)][oreX + Math.floor(Math.random() * 10)] = '2';
 		}
 	}
