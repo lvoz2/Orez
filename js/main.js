@@ -73,7 +73,6 @@ game.load = function() {
 }
 game.init = function() {
 	game.tileAtlas = Loader.getImage('tiles');
-	window.requestAnimationFrame(game.refresh());
 }
 game.start = function() {
 }
@@ -99,7 +98,7 @@ function Game() {
 		}
 	};
 	this.map = map;
-	setInterval(game.refresh, 20)
+	window.requestAnimationFrame(game.refresh());
 }
 game.genGame = function(x, y, direction) {
 	var grid = Array(100);
