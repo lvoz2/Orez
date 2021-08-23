@@ -36,7 +36,7 @@ game.newGame = function() {
 	game.instance = new Game();
 }
 game.refresh = function() {
-	window.requestAnimationFrame(game.refresh())
+	window.requestAnimationFrame(game.refresh)
 	for (var c = 0; c < game.instance.map.cols; c++) {
 		for (var r = 0; r < game.instance.map.rows; r++) {
 			var tile = game.instance.map.getTile(c, r);
@@ -98,7 +98,7 @@ function Game() {
 		}
 	};
 	this.map = map;
-	window.requestAnimationFrame(game.refresh());
+	window.requestAnimationFrame(game.refresh);
 }
 game.genGame = function(x, y, direction) {
 	var grid = Array(100);
