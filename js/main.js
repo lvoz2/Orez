@@ -66,7 +66,13 @@ game.load = function() {
 	game.resize()
 	game.ctx = game.canvas.getContext('2d');
 	var p = load();
-	game.tileAtlas = Loader.getImage('tiles')
+	Promise.all(p).then(function (loaded) {
+		this.init();
+	}.bind(this));
+}
+game.init = function() {
+	game.tileAtlas = Loader.getImage('tiles');
+	window.requestAnimationFrame(game.refresh());
 }
 game.start = function() {
 }
