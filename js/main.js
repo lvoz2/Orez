@@ -107,7 +107,9 @@ game.genGame = function(x, y, direction) {
 	}
 	if (direction == 'right') {
 		for (var a = 0; a < 100; a++) {
-			game.instance.map.tiles[(y * 100) + a].push(grid[a])
+			for (var f = 0; f < grid[a].length; f++) {
+				game.instance.map.tiles[(y * 100) + a].push(grid[a][f])
+			}
 		}
 	}
 	if (direction == 'down') {
