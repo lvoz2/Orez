@@ -92,7 +92,6 @@ function Game() {
 		}
 	};
 	this.map = map;
-	setInterval(game.refresh, 20)
 }
 game.genGame = function(x, y, direction) {
 	var grid = Array(100);
@@ -108,7 +107,7 @@ game.genGame = function(x, y, direction) {
 	}
 	if (direction == 'right') {
 		for (var a = 0; a < 100; a++) {
-			game.instance.map.tiles[(a + y)*100].push(grid[a])
+			game.instance.map.tiles[(y * 100) + a].push(grid[a])
 		}
 	}
 	if (direction == 'down') {
