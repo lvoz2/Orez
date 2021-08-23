@@ -92,6 +92,7 @@ function Game() {
 		}
 	};
 	this.map = map;
+	setInterval(game.refresh, 20)
 }
 game.genGame = function(x, y, direction) {
 	var grid = Array(100);
