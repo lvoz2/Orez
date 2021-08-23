@@ -91,7 +91,7 @@ function Game() {
 	var map = {
 		cols: 100,
 		rows: 100,
-		tsize: 100,
+		tsize: 64,
 		tiles: grid,
 		getTile: function(x, y) {
 			return this.tiles[y][x]
