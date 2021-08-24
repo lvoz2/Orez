@@ -1,23 +1,10 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			html, body {
-				width: 100%;
-				height: 100%;
-				margin: 0;
-			}
-		</style>
-		<script src="https://lvoz2.github.io/Orez/js/main.js"></script>
-	</head>
-	<body onload="game.load()" onresize="game.resize()">
-		<div id="loadScreen">
-			<h1>Orez</h1>
-			<h4 id="description"></h4>
-			<br/>
-			<button class="menu-button" onclick="game.loadGame()">Load Game</button>
-			<button class="menu-button" onclick="game.newGame()">New Game</button>
+	<body>
+@@ -18,6 +18,6 @@ <h4 id="description"></h4>
+			<button id= LoadGame class="menu-button" onclick="game.loadGame()">Load Game</button>
+			<button id= NewGame class="menu-button" onclick="game.newGame()">New Game</button>
 		</div>
+		<canvas id="screen"></canvas>
 		<canvas id="screen">Your browser does not support the HTML5 canvas element. To fix this, update your browser.</canvas>
 	</body>
 </html>
