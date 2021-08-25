@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<style>
@@ -8,16 +8,18 @@
 				margin: 0;
 			}
 		</style>
+		<title>Orez - Gather Resources, Manufacture Items, Automate Everything!</title>
 		<script src="https://lvoz2.github.io/Orez/js/main.js"></script>
+		<link rel="stylesheet" type="text/css" src=""/>
 	</head>
 	<body onload="game.load()" onresize="game.resize()">
 		<div id="loadScreen">
-			<img src="Orez banner.jpg" alt=:Orez_banner" style="width:1024px;height:100px;"> 
+			<img src="Orez banner.jpg" alt="Orez_banner" style="width: 1024px; height: 100px;"/> 
 			<h1>Orez</h1>
 			<h4 id="description"></h4>
 			<br/>
-			<button id= loadGame class="menu-button" onclick="game.loadGame()">Load Game</button>
-			<button id= newGame class="menu-button" onclick="game.newGame()">New Game</button>
+			<button id="loadGame" class="menu-button" onclick="game.loadGame()">Load Game</button>
+			<button id="newGame" class="menu-button" onclick="game.newGame()">New Game</button>
 		</div>
 		<canvas id="screen">Your browser does not support the HTML5 canvas element. To fix this, update your browser.</canvas>
 	</body>
